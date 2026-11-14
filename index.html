@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bibek Lamichhane | Nepali Congress – Nuwakot Election Area 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --nc-red: #c8102e;
@@ -649,4 +651,307 @@
       margin-bottom: 10px;
     }
 
- 
+    .tab-panel ul {
+      padding-left: 20px;
+      color: var(--nc-muted);
+    }
+
+    /* =========================================
+       BLOG
+    ========================================= */
+    .blog-section {
+      background: #ffffff;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 26px;
+    }
+
+    .blog-card {
+      background: #ffffff;
+      border: 1px solid var(--nc-border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--nc-red);
+    }
+
+    .blog-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .blog-body {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: "Mukta", "Noto Sans Devanagari", "Segoe UI", sans-serif;
+    }
+
+    .blog-meta {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--nc-green-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .blog-body h3 {
+      font-size: 1.45rem;
+      line-height: 1.35;
+      color: var(--nc-ink);
+    }
+
+    .blog-body h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blog-body h3 a:hover {
+      color: var(--nc-red);
+    }
+
+    .blog-body p {
+      color: var(--nc-muted);
+      font-size: 1.02rem;
+    }
+
+    .blog-body .btn-primary {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+    footer {
+      background: var(--nc-green-dark);
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 0.92rem;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .blog-card.featured {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-facts {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body class="gate-locked">
+
+  <!-- ENTRY GATE -->
+  <div id="entry-gate" role="dialog" aria-label="Enter website">
+    <div class="gate-card">
+      <div class="gate-stars"><span class="gate-star">★</span><span class="gate-star">★</span><span class="gate-star">★</span><span class="gate-star">★</span></div>
+      <div class="gate-subtitle">Nepali Congress</div>
+      <div class="gate-title">Bibek Lamichhane</div>
+      <div class="gate-nepali">नुवाकोट निर्वाचन क्षेत्र नं. २</div>
+      <button class="logo-enter-btn" id="enter-btn" aria-label="Enter website">
+        <svg width="96" height="64" viewBox="0 0 96 64" aria-hidden="true">
+          <rect width="96" height="64" fill="#fff"/>
+          <rect width="96" height="21" fill="#c8102e"/>
+          <rect y="43" width="96" height="21" fill="#c8102e"/>
+          <g fill="#c8102e"><text x="18" y="38" font-size="14">★</text><text x="36" y="38" font-size="14">★</text><text x="54" y="38" font-size="14">★</text><text x="72" y="38" font-size="14">★</text></g>
+        </svg>
+      </button>
+      <div class="gate-instruction">Tap the flag to enter</div>
+      <div class="gate-instruction-np">प्रवेश गर्न झण्डामा थिच्नुहोस्</div>
+    </div>
+  </div>
+
+  <div class="flag-ribbon"></div>
+
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="brand">
+        <svg class="brand-flag" viewBox="0 0 44 30" aria-hidden="true">
+          <rect width="44" height="30" fill="#fff"/>
+          <rect width="44" height="10" fill="#c8102e"/>
+          <rect y="20" width="44" height="10" fill="#c8102e"/>
+          <g fill="#c8102e"><circle cx="10" cy="15" r="1.8"/><circle cx="18" cy="15" r="1.8"/><circle cx="26" cy="15" r="1.8"/><circle cx="34" cy="15" r="1.8"/></g>
+        </svg>
+        <span class="brand-text">
+          <strong>Bibek Lamichhane</strong>
+          <span>Nepali Congress · Nuwakot-2</span>
+        </span>
+      </a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#congress">Nepali Congress</a>
+        <a href="#blog">Blog</a>
+        <button class="btn-replay" id="replay-btn" type="button">Replay Intro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">★ Nepali Congress</div>
+          <h1>Bibek <span>Lamichhane</span></h1>
+          <div class="hero-role">Nuwakot Election Area 2</div>
+          <p class="hero-lead">
+            सुशासन र समुन्नतिको लागि — for good governance, quality education, an aware citizenry and a self-reliant local economy.
+          </p>
+          <div class="quick-facts">
+            <div class="fact-box"><div class="fact-label">Party</div><div class="fact-value">Nepali Congress</div></div>
+            <div class="fact-box green-top"><div class="fact-label">District</div><div class="fact-value">Nuwakot</div></div>
+            <div class="fact-box"><div class="fact-label">Constituency</div><div class="fact-value">Election Area 2</div></div>
+          </div>
+          <div class="hero-actions">
+            <a href="#blog" class="btn-primary">Read the Blog</a>
+            <a href="#congress" class="btn-secondary">Our Values</a>
+          </div>
+        </div>
+        <div class="portrait-card">
+          <div class="portrait-frame">
+            <img src="/images/sushasan-ra-samunnati.jpg" alt="सुशासन र समुन्नतिको लागि — Nepali Congress" style="object-position: 70% center;" />
+          </div>
+          <div class="photo-upload-bar">
+            <div class="photo-caption">सुशासन र समुन्नतिको लागि<small>सबै अट्ने देश, सबैलाई जोड्ने कांग्रेस</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About</span>
+          <h2>Development beyond infrastructure</h2>
+          <p>Roads and buildings are the foundation. Education, awareness and opportunity are the goal.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon">📚</div><h3>Quality Education</h3><p>Better learning outcomes in public schools, digital education and practical skills.</p></div>
+          <div class="card"><div class="card-icon green">🌾</div><h3>Production &amp; Jobs</h3><p>Modern agriculture, local enterprise, tourism and opportunities at home for youth.</p></div>
+          <div class="card"><div class="card-icon">⚖️</div><h3>Good Governance</h3><p>Transparent budgets, public hearings, social audits and regular monitoring.</p></div>
+          <div class="card"><div class="card-icon green">🤝</div><h3>Social Justice</h3><p>Meaningful participation of women, Dalits, Indigenous peoples and marginalised communities.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="congress-section" id="congress">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Nepali Congress</span>
+          <h2>राष्ट्रियता, लोकतन्त्र र समाजवाद</h2>
+          <p>Nationalism, democracy and socialism — connected to everyday local life.</p>
+        </div>
+        <div class="pillar-banner">
+          <div>
+            <h3>चुनाव जित्ने मात्र होइन, समाज जित्ने राजनीति</h3>
+            <p>Politics of ideas, policy, programmes and results — not personalities.</p>
+          </div>
+          <a href="/blog/vikas-ko-naya-bhashya.html" class="btn-secondary">Read the article</a>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab-btn active" data-tab="tab-democracy" type="button">Democracy</button>
+          <button class="tab-btn" data-tab="tab-justice" type="button">Social Justice</button>
+          <button class="tab-btn" data-tab="tab-cadre" type="button">Role of a Cadre</button>
+        </div>
+        <div class="tab-panel active" id="tab-democracy">
+          <h3>लोकतन्त्र</h3>
+          <p>Civil liberties, inclusion and accountable governance as the foundation of local government.</p>
+        </div>
+        <div class="tab-panel" id="tab-justice">
+          <h3>सामाजिक न्याय</h3>
+          <p>Equal opportunity and dignity for every citizen, standing against caste, gender and social discrimination.</p>
+        </div>
+        <div class="tab-panel" id="tab-cadre">
+          <h3>कार्यकर्ताको भूमिका</h3>
+          <p>A party worker is not only a campaigner but an activist for social change — supporting good work, offering constructive criticism and respecting differing views.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-section" id="blog">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Blog · ब्लग</span>
+          <h2>विचार र लेखहरू</h2>
+          <p>Thoughts on development, local governance and the role of Nepali Congress workers.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card featured">
+            <a href="/blog/vikas-ko-naya-bhashya.html"><img src="/images/sushasan-ra-samunnati.jpg" alt="सुशासन र समुन्नतिको लागि — हरियो नेपालको नक्सामाथि नेपाली कांग्रेसको झण्डा" /></a>
+            <div class="blog-body">
+              <div class="blog-meta">स्थानीय तहको निर्वाचन · विकास</div>
+              <h3><a href="/blog/vikas-ko-naya-bhashya.html">विकासको नयाँ भाष्य : पूर्वाधारभन्दा माथि उठेर चेतना, शिक्षा र समृद्धिको यात्रा</a></h3>
+              <p>स्थानीय तहको निर्वाचन र नेपाली कांग्रेसका कार्यकर्ताको भूमिका — पूर्वाधार विकासको आधार हो, शिक्षा र सामाजिक चेतना विकासको आत्मा हुन्। सीमित स्रोत र साधनबाट अधिकतम उपलब्धि हासिल गर्ने नयाँ विकास संस्कृतिको खोजी।</p>
+              <a href="/blog/vikas-ko-naya-bhashya.html" class="btn-primary">पूरा पढ्नुहोस् →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Bibek Lamichhane</strong> · Nepali Congress · Nuwakot Election Area 2</p>
+    <p>जय नेपाल!</p>
+  </footer>
+
+  <script>
+    (function () {
+      var gate = document.getElementById('entry-gate');
+      var body = document.body;
+      function enter() {
+        gate.classList.add('hidden');
+        body.classList.remove('gate-locked');
+        try { sessionStorage.setItem('nc-entered', '1'); } catch (e) {}
+      }
+      document.getElementById('enter-btn').addEventListener('click', enter);
+      document.getElementById('replay-btn').addEventListener('click', function () {
+        gate.classList.remove('hidden');
+        body.classList.add('gate-locked');
+        window.scrollTo(0, 0);
+      });
+      try { if (sessionStorage.getItem('nc-entered') === '1' || location.hash) enter(); } catch (e) {}
+
+      document.querySelectorAll('.tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+          document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+          btn.classList.add('active');
+          document.getElementById(btn.dataset.tab).classList.add('active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
